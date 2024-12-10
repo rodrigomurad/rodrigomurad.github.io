@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Materia: Programación IV
+    Actividad: Trabajo Práctico 2
+    Profesora: Ing. Silvia Rosana Hoferek
+    Alumnos: Dragomir Raicevich & Rodrigo Murad
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TIFMA de la Materia 'Inteligencia Artificial'">
+    <meta name="keywords" content="Videojuego, Videojuego Serio, Dislexia, Pez Payaso">
+    <meta name="author" content="Dragomir Raicevich & Rodrigo Murad">
+    <link rel="stylesheet" href="info.css">
+    <title>El Viaje Mar&iacute;timo de Clow > Info</title>
+</head>
+
+<body>
+    <div>
+        <img src="./img/shine1.png" alt="" class="shine fade-in_1">
+        <img src="./img/shine2.png" alt="" class="shine fade-in_2">
+    </div>
+    <div id="contenido">
+        <div id="texto" class="ondulacion1">
+            <p><span class="titulo">&middot; MATERIA &middot;</span><br /><span class="subtitulo">Programaci&oacute;n
+                    IV</span></p>
+            <p class="titulo">&middot; TIFMA &middot;</p>
+            <p><span class="titulo">&middot; PROFESORES &middot;</span><br /><span class="subtitulo">Ing. Silvia Rosana
+                    Hoferek</span><br>
+                <span class="subtitulo">Dr. Marcelo Alejandro Toledo</span>
+            </p>
+            <p><span class="titulo">&middot; PSICOPEDAGOGA &middot;</span><br /><span class="subtitulo">Lic. Micaela
+                    Oviedo</span></p>
+            <p><span class="titulo">&middot; ALUMNOS &middot;</span><br /><span class="subtitulo">Dragomir
+                    Raicevich<br />Rodrigo Murad</span></p><br><br>
+            <a href="./index.html" class="boton">
+                <img src="./img/boton_inicio.png" alt="">
+            </a>
+        </div>
+
+    </div>
+    <img src="./img/finger.png" alt="" id="dedo" class="cursor" style="position: absolute;">
+</body>
+<script>
+    window.addEventListener("mousemove", (Event) => {
+        document.getElementById("dedo").style.left = Event.clientX + 1 + "px";
+        document.getElementById("dedo").style.top = Event.clientY + 1 + "px";
+    });
+</script>
+
+</html>

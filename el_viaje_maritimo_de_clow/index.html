@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Materia: Programación IV
+    Actividad: Trabajo Práctico 2
+    Profesora: Ing. Silvia Rosana Hoferek
+    Alumnos: Dragomir Raicevich & Rodrigo Murad
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TIFMA de la Materia 'Inteligencia Artificial'">
+    <meta name="keywords" content="Videojuego, Videojuego Serio, Dislexia, Pez Payaso">
+    <meta name="author" content="Dragomir Raicevich & Rodrigo Murad">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>El Viaje Mar&iacute;timo de Clow</title>
+</head>
+
+<body class="introBackground">
+    <div class="divContenedor">
+        <img src="./img/elviajemaritimodeclow.png" id="mainImage" alt="">
+        <div class="divContenedorBotones">
+            <a href="./info.html">
+                <img src="./img/boton_info.png" alt="" class="boton">
+            </a>
+            <a href="./clow.html">
+                <img src="./img/boton_jugar.png" alt="" class="boton">
+            </a>
+        </div>
+    </div>
+    <img src="./img/finger.png" alt="" id="dedo" class="cursor" style="position: absolute;">
+</body>
+
+<script>
+    window.addEventListener("mousemove", (Event) => {
+        document.getElementById("dedo").style.left = Event.clientX + 1 + "px";
+        document.getElementById("dedo").style.top = Event.clientY + 1 + "px";
+    });
+</script>
+
+</html>
