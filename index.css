@@ -2,9 +2,14 @@ body {
     padding: 10px;
 }
 
+a {
+    margin: 5px;
+    width: 130px;
+    display: inline;
+}
+
 div.card {
     margin: 10px;
-    /* height: 350px; */
     width: 290px;
 }
 
