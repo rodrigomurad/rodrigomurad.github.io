@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="videojuegos, Videogames, aztecmotec, memotec, memoria">
+    <meta name="description" content="DAR-Fox Videogames Studio">
+    <meta name="author" content="Dragomir Raicevich & Rodrigo Murad">
+    <link rel="stylesheet" href="aztecmotec_game.css">
+    <title>DAR-Fox Studios > Videojuegos > AZTECMOTEC</title>
+</head>
+
+<body onload="iniciar()">
+    <div id="gana" class="divResultado">
+        <img src="img/redencion.png" alt="REDENCIÓN">
+        <img src="img/regresar.png" alt="Regresar" id="btn_regresar" onclick="iniciar()">
+    </div>
+    <div id="pierde" style="display: none;" class="divResultado">
+        <img src="img/sacrificio.png" alt="SACRIFICIO">
+        <img src="img/regresar.png" alt="Regresar" id="btn_regresar" onclick="iniciar()">
+    </div>
+    <div id="contenedor_full">
+        <div id="contenedor_maestro">
+            <p id="countdown">TIEMPO RESTANTE: </p>
+            <div id="contenedor_energia">
+                <img src="img/energia.png" alt="" id="energia">
+            </div>
+            <div id="contenedor_marco">
+                <div id="contenedor">
+                </div>
+            </div>
+            <div id="botonera">
+                <div id="reset">
+                    <a href="#" onclick="iniciar()">
+                        <img src="img/boton_reset.png" alt="reset">
+                        <p>Reiniciar</p>
+                    </a>
+                </div>
+                <div id="exit">
+                    <a href="aztecmotec.html">
+                        <img src="img/boton_exit.png" alt="exit">
+                        <p>Exit</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="aztecmotec_game.js"></script>
+
+</html>

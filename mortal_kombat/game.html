@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/animaciones.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="sweetalert.min.js"></script>
+    <script src="info_fighters.json"></script>
+    <title>Mortal Kombat 1 - CODERHOUSE (Proyecto Final) > GAME</title>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <div class="divMenuFighters">
+
+            <!-- MENÚ PRINCIPAL -->
+            <div id="IDmenu1">
+                <table class="menu1">
+                    <tr>
+                        <td style="text-align: center;">
+                            <p>
+                                <label for="nick">Ingrese su Nombre</label>
+                            </p>
+                            <button class="buttons okButton" onclick="infoDevelopers()">?</button>
+                            <input type="text" name="nick" id="nick" value="">
+                            <button class="buttons okButton" onclick="chequeaNombre()">OK</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex-container">
+                            <button class="buttons" onclick="muestraMenu(1)">Main</button>
+                            <button class="buttons" onclick="muestraMenu(2)">Scores</button>
+                            <button class="buttons" onclick="muestraMenu(3)" id="buttonPlay" disabled>Play</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <!-- MENÚ INFO LUCHADORES -->
+            <div id="idDiv_1" style="display: none;">
+
+                <!-- TABLA CON LOS LUCHADORES -->
+                <table class="menuFighters" style="background-repeat: no-repeat;">
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"></td>
+                        <td class="tdFighters" onmouseover="glow('johnny_cage_menuInfo')"
+                            onmouseout="unGlow('johnny_cage_menuInfo')" onclick="infoLuchador('johnny_cage')"
+                            id="johnny_cage_menuInfo"></td>
+                        <td class="tdFighters" onmouseover="glow('kano_menuInfo')" onmouseout="unGlow('kano_menuInfo')"
+                            onclick="infoLuchador('kano')" id="kano_menuInfo"></td>
+                        <td class="tdFighters"></td>
+                        <td class="tdFighters" onmouseover="glow('sub-zero_menuInfo')"
+                            onmouseout="unGlow('sub-zero_menuInfo')" onclick="infoLuchador('sub-zero')"
+                            id="sub-zero_menuInfo">
+                        </td>
+                        <td class="tdFighters" onmouseover="glow('sonya_menuInfo')"
+                            onmouseout="unGlow('sonya_menuInfo')" onclick="infoLuchador('sonya')" id="sonya_menuInfo">
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="tdFighters"></td>
+                        <td class="tdFighters" onmouseover="glow('raiden_menuInfo')"
+                            onmouseout="unGlow('raiden_menuInfo')" onclick="infoLuchador('raiden')"
+                            id="raiden_menuInfo"></td>
+                        <td class="tdFighters" onmouseover="glow('liu_kang_menuInfo')"
+                            onmouseout="unGlow('liu_kang_menuInfo')" onclick="infoLuchador('liu_kang')"
+                            id="liu_kang_menuInfo">
+                        </td>
+                        <td class="tdFighters" onmouseover="glow('scorpion_menuInfo')"
+                            onmouseout="unGlow('scorpion_menuInfo')" onclick="infoLuchador('scorpion')"
+                            id="scorpion_menuInfo">
+                        </td>
+                        <td class="tdFighters"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"></td>
+                    </tr>
+                </table>
+
+                <!-- TABLA CON LA INFO DEL LUCHADOR -->
+                <table class="tablaInfoFighters">
+                    <tr>
+                        <td id="infoFightersImagen">
+                            <label for="" class="infoFightersInput" style="width: 105%; height: 160px;"></label>
+                        </td>
+                        <td class="td-InfoFighters">
+                            <label for="" class="infoFightersInput" id="infoFightersNombre"
+                                style="color: yellow;"></label>
+                            <label for="" class="infoFightersInput" id="infoFightersHistoria"
+                                style="color: white"></label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- MENÚ SCORE -->
+            <div id="idDiv_2" style="display: none;"></div>
+
+            <!-- MENÚ PLAY -->
+            <div id="idDiv_3" style="display: none;">
+                <div id="idDiv_3_menu">
+                    <table class="menuFighters">
+                        <tr>
+                            <td colspan="7"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"></td>
+                            <td class="tdFighters" onmouseover="glow('johnny_cage')" onmouseout="unGlow('johnny_cage')"
+                                onclick="seleccionaLuchador('johnny_cage')" id="johnny_cage"></td>
+                            <td class="tdFighters" onmouseover="glow('kano')" onmouseout="unGlow('kano')"
+                                onclick="seleccionaLuchador('kano')" id="kano"></td>
+                            <td class="tdFighters"></td>
+                            <td class="tdFighters" onmouseover="glow('sub-zero')" onmouseout="unGlow('sub-zero')"
+                                onclick="seleccionaLuchador('sub-zero')" id="sub-zero">
+                            </td>
+                            <td class="tdFighters" onmouseover="glow('sonya')" onmouseout="unGlow('sonya')"
+                                onclick="seleccionaLuchador('sonya')" id="sonya"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdFighters"></td>
+                            <td class="tdFighters" onmouseover="glow('raiden')" onmouseout="unGlow('raiden')"
+                                onclick="seleccionaLuchador('raiden')" id="raiden"></td>
+                            <td class="tdFighters" onmouseover="glow('liu_kang')" onmouseout="unGlow('liu_kang')"
+                                onclick="seleccionaLuchador('liu_kang')" id="liu_kang">
+                            </td>
+                            <td class="tdFighters" onmouseover="glow('scorpion')" onmouseout="unGlow('scorpion')"
+                                onclick="seleccionaLuchador('scorpion')" id="scorpion">
+                            </td>
+                            <td class="tdFighters"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- STAGE DE PELEA -->
+                <div id="stage" style="display:none">
+                    <div class="countdown_fight">
+                        <p id="countdown_fight_texto"></p>
+                    </div>
+
+                    <table class="tableStage">
+                        <tr style="height: 30px;">
+                            <td colspan="3">
+                                <div class="tablaStageEnergia">
+                                    <div class="panelEnergia panelEnergiaP1">
+                                        <div class="energia" id="EnergiaFighter1"></div>
+                                        <p id="NombreFighter1">
+                                            Player 1
+                                        </p>
+                                    </div>
+
+                                    <div class="panelEnergia panelEnergiaP2">
+                                        <div class="energia" id="EnergiaFighter2"></div>
+                                        <p id="NombreFighter2">
+                                            Player 2
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fighter" colspan="3">
+                                <img src="" alt="" id="player1">
+                                <img src="" alt="" id="player2">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="javascript.js"></script>
+
+</html>

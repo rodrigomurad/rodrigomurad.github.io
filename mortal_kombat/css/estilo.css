@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* MAIN SCREEN */
+.help {
+    background-image: url(../img/marble.png);
+    border: 1px solid black;
+    padding: 0px;
+    width: 450px;
+    height: 99vh;
+}
+
+.help_img {
+    width: 100%;
+}
+
+.help_info {
+    padding: 10px;
+    color: white;
+    text-shadow: black 2px 2px;
+    text-align: center;
+}
+
+.help_icons {
+    text-shadow: none;
+    font-size: 20px;
+}
+
+/* SOCRES */
+#idDiv_2 {
+    background-image: url(../img/marble.png);
+    border: 1px solid black;
+    padding: 5px;
+    width: 450px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.campos_scores {
+    user-select: none;
+    display: table;
+    padding: 5px 5px;
+    border: 3px gray inset;
+    background-color: transparent;
+    height: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: black 2px 2px;
+    opacity: 1;
+}
+
+.campos_scores_nombre {
+    width: 370px;
+}
+
+.campos_scores_score {
+    width: 30px;
+    text-align: right;
+}
+
+.menu1 {
+    background-image: url(../img/marble.png);
+    background-size: contain;
+    border: 1px solid black;
+    width: 461px;
+    height: 150px;
+    padding: 0px 15px;
+}
+
+label,
+input {
+    text-transform: uppercase;
+    color: white;
+    height: 30px;
+    width: 165px;
+}
+
+input {
+    border: 3px inset;
+    text-align: center;
+    opacity: 0.5;
+    color: black;
+}
+
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* BOTONES */
+.buttons {
+    height: 40px;
+    width: 120px;
+    text-transform: uppercase;
+    color: blue;
+    border: 4px outset gray;
+    border-radius: 0px;
+}
+
+.okButton {
+    height: 40px;
+    width: 40px;
+}
+
+.tablaInfoFighters {
+    width: 461px;
+    height: 190px;
+    background: url(../img/marble.png);
+    background-size: contain;
+    border: 1px black solid;
+}
+
+.infoFightersInput {
+    user-select: none;
+    width: 100%;
+    height: 15px;
+    display: table;
+    padding: 5px 5px;
+    border: 3px gray inset;
+    background-color: transparent;
+    text-align: center;
+    text-shadow: black 2px 2px;
+    opacity: 1;
+}
+
+#infoFightersImagen {
+    width: 87px;
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+#infoFightersHistoria {
+    height: 100%;
+}
+
+.td-InfoFighters {
+    height: 130px;
+    width: 270px;
+    border-width: 15px 25px;
+}
+
+.menuFighters {
+    background-image: url(../img/menuFighters.jpg);
+    border: 1px solid black;
+    width: 461px;
+    height: 280px;
+}
+
+td {
+    border: 5px solid transparent;
+}
+
+#player2 {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.tdFighters {
+    width: 63px;
+    height: 80px;
+}
+
+.divMenuFighters {
+    position: relative;
+    width: 461px;
+    height: 100%;
+    left: 50%;
+    margin-left: -230px;
+    justify-content: center;
+}
+
+.tableStage {
+    background-image: url(../img/the_courtyard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 461px;
+    height: 293px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.fighter {
+    position: relative;
+}
+
+img[id^="player"] {
+    position: absolute;
+}
+
+#player1 {
+    top: 70px;
+    left: 60px;
+    z-index: 1;
+}
+
+#player2 {
+    top: 70px;
+    left: 230px;
+}
+
+.tablaStageEnergia {
+    height: 20px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.panelEnergia {
+    border: 3px solid yellow;
+    background: rgb(255, 0, 0);
+    background: -moz-linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(96, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(96, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(96, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#600000",GradientType=1);
+    width: 40%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.energia {
+    width: 50%;
+    height: 100%;
+    background-color: green;
+}
+
+.panelEnergia p {
+    color: yellow;
+    text-shadow: black 2px 2px;
+    margin: -16px 5px;
+}
+
+.panelEnergiaP1 {
+    text-align: left;
+}
+
+.panelEnergiaP2 {
+    text-align: right;
+}
+
+.countdown_fight {
+    z-index: 3;
+    width: 461px;
+    height: 293px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#countdown_fight_texto {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 5vw;
+    color: red;
+    text-shadow: black 2px 2px;
+}

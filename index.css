@@ -1,0 +1,55 @@
+body {
+    padding: 10px;
+}
+
+a {
+    margin: 5px;
+    width: 130px;
+    display: inline;
+}
+
+div.card {
+    margin: 10px;
+    width: 290px;
+}
+
+div.card-body {
+    text-align: justify;
+}
+
+h5.card-title {
+    text-align: center;
+}
+
+p.card-text {
+    height: 120px;
+}
+
+img {
+    height: 143px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.centrabotones {
+    text-align: center;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.tools {
+    text-align: center;
+}

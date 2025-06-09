@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Materia: Programación IV
+    Actividad: TIFMA
+    Profesora: Ing. Silvia Rosana Hoferek
+    Alumnos: Dragomir Raicevich & Rodrigo Murad
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TIFMA de la Materia 'Inteligencia Artificial'">
+    <meta name="keywords" content="Videojuego, Videojuego Serio, Dislexia, Pez Payaso">
+    <meta name="author" content="Dragomir Raicevich & Rodrigo Murad">
+    <link rel="stylesheet" href="clow.css">
+    <title>El Viaje Mar&iacute;timo de Clow > Videojuego</title>
+</head>
+
+<body class="background_game" onload="prepara_escenario()">
+    <div id="fauna2"></div>
+    <img src="./img/clowR.png" alt="" id="clow">
+
+    <div id="peces">
+        <img src="" alt="" id="pez1" class="pez ondulacion1">
+        <img src="" alt="" id="pez2" class="pez ondulacion2">
+        <img src="" alt="" id="pez3" class="pez ondulacion1">
+    </div>
+
+    <div id="burbujas">
+        <div id="burbuja1" class="burbuja ondulacionBurbujas">
+            <img src="./img/burbuja.png" alt="">
+            <p id="letra1"></p>
+        </div>
+        <div id="burbuja2" class="burbuja ondulacionBurbujas">
+            <img src="./img/burbuja.png" alt="">
+            <p id="letra2"></p>
+        </div>
+        <div id="burbuja3" class="burbuja ondulacionBurbujas">
+            <img src="./img/burbuja.png" alt="">
+            <p id="letra3"></p>
+        </div>
+    </div>
+
+    <div>
+        <img src="./img/shine1.png" alt="" class="shine fade-in_1">
+        <img src="./img/shine2.png" alt="" class="shine fade-in_2">
+    </div>
+
+    <div id="fauna1"></div>
+
+    <div id="gui">
+        <div class="divBoard cssBotonesBoard">
+            <a href="./index.html" class="boton" onclick="salir_juego()">
+                <img src="./img/boton_inicio.png" alt="">
+            </a>
+        </div>
+        <div class="divBoard">
+            <p id="vidas" class="textosGUI"></p>
+            <p id="energia" class="textosGUI"></p>
+            <img src="./img/board.png" alt="" id="board">
+        </div>
+        <div class="divBoard cssBotonesBoard">
+            <img src="./img/boton_nivel.png" alt="">
+        </div>
+    </div>
+
+    <div id="palabra">
+        <p id="palabraElegida" class="ondulacion1"></p>
+    </div>
+
+    <img src="./img/finger.png" alt="" id="dedo" class="pez">
+</body>
+
+<script src="clow.js"></script>
+
+</html>

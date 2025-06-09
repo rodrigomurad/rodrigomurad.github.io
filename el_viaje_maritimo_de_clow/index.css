@@ -1,0 +1,47 @@
+* {
+    cursor: none;
+}
+
+body {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: none;
+    overflow: hidden;
+}
+
+.divContenedor {
+    background-image: url("./img/background_arena.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.divContenedorBotones {
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    bottom: 20%;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#mainImage {
+    position: absolute;
+    height: 100vh;
+}
+
+.boton:hover {
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1)) brightness(120%);
+}
